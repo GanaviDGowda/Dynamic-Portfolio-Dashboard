@@ -102,6 +102,7 @@ export function SectorAllocationChart({ sectors }: SectorAllocationChartProps) {
                 innerRadius={65}
                 outerRadius={105}
                 paddingAngle={3}
+                isAnimationActive={false}
                 label={(entry: any) =>
                   entry.percentage > 5 ? `${entry.name} (${entry.percentage.toFixed(0)}%)` : ''
                 }
@@ -116,7 +117,7 @@ export function SectorAllocationChart({ sectors }: SectorAllocationChartProps) {
                   />
                 ))}
               </Pie>
-              <Tooltip content={<CustomTooltip />} />
+              <Tooltip content={<CustomTooltip />} isAnimationActive={false} />
               <Legend
                 verticalAlign="bottom"
                 height={36}
